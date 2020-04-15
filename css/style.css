@@ -1,0 +1,44 @@
+body {
+    font-family: helvetica;
+}
+#header {
+    background-color: IndianRed; 
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+h1 {
+    vertical-align: middle;
+    color: white;
+    font-weight: bold;
+}
+
+.row {
+    margin:10px 20px;
+}
+
+#results {
+    margin:30px 20px 10px 0px;
+}
+
+.person-row {
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: LightCoral;
+    width: 100%;
+    float:left;
+}
+
+.person-row img {
+    float:left;
+    margin-right:  20px;
+}
+
+.person-info {
+    float: left;
+}
+
+.person-row > button {
+    float: right;
+}

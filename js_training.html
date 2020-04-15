@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+<body>
+<script>
+    //How to use functions:
+    function converter(celcius){
+        /*multiplication and division are avaluated first from left to right
+        * celcius * 9, result divided by 5, then we add 32
+        * Sample of how to define variable and add value at the same time "f"
+        */
+        var f = celcius * 9/5 + 32;
+        return f;
+    }
+    
+     var inputCelcius=38;
+     console.log (inputCelcius + "C = "+ converter(inputCelcius) + "F");
+    
+    // Can be used to display data  
+     alert("Welcome to JS sample"); 
+     console.log("Displaying results in console");
+
+    //defining variable and usage
+     var age;
+     var age = 47;
+     console.log (age);
+     
+     var name="Maria";
+     var lastName="Perez";
+     var fullName = name + ' '+lastName;
+     console.log (fullName+' '+age );
+     
+    //IF    
+     if (age==15)
+     {
+        console.log ("quinceanera");
+     }
+     if (age!=15)
+     {
+        console.log("not quinceanera");
+     }
+     
+     // AND &&
+     // OR ||
+     // Opposite !
+     
+     if (age > 40 && age <70)
+     {
+        console.log ("cuarentona");
+     }
+     if (age >70 || age <15)
+     {
+        console.log ("should not be driving");        
+     }
+
+    var quince= age==15;
+    if (!quince)
+    { console.log("Not 15");
+    }
+    
+    if (age>100)
+    {
+        console.log("more than 100");
+    }
+    else if (age>50)
+    { console.log("more than 50");
+    }
+    else
+    {console.log("adult age");
+    }
+
+    //SWITCH
+    
+    switch(age)
+    {
+        case 15:
+            console.log ("tag: quinceanera");
+            break;
+        case 40:
+            console.log ("tag: cuarenta");
+            break;
+        case 70:
+            console.log("tag:senior");
+            break;
+        default:
+            console.log("no tag age");
+            break;
+    }
+    
+    // while loop
+    var i=0;
+    while (i<=20){
+     i++; // same as i=i+1;         
+        if (i>5  && i<8)
+        {
+            continue; // does not continue with the execution and go to next i value
+        }
+        if (i==10)
+        {
+            break;
+        }
+         console.log (i);
+    }
+    
+    // for loop
+    for (var i=1; i<=10; i++)
+    {
+         if (i>5  && i<8)
+        {
+            continue; // does not continue with the execution and go to next i value
+        }
+        if (i==10)
+        {
+            break;
+        }
+         console.log (i);       
+    }
+
+    //Arrays - start  with 0,  list[0], -1 is when you start from the last one.
+    
+    var list1=[10,20,"elena",23,"tere"];
+    var list2= new Array (10,20,"elena",23,"tere");
+    console.log (list1);
+    console.log (list2);
+    console.log (list2[2]);
+    list2.push(1000);   //add element at the end of the array
+    list1.pop(); // remove last element of the array.
+    console.log (list1);
+    console.log (list2);
+    
+    list1 = [1,2,3,4,5,6,7,8,9,10];
+    console.log (list1);
+    list1.splice(2,0,1000,2000);  //do not remove any, just add 2 item  s starting at position 1 (0,1)
+    console.log (list1);
+    list1.splice(2,1); //do not add any, just remove the one at position 1. Arrays starts with 0 index 
+    console.log (list1);
+    list1.splice(2,2,3000,4000,5000); // remove 1 and add 3 more items in position 1
+    console.log (list1);
+ 
+ // you can access positions with negative numbers that start from the end
+ // -1 is the last item.
+ 
+    list1.splice(-3,2,6000,7000); // remove 1 and add 3 more items in position 1
+    console.log (list1);
+    
+    var totalItems = list1.length;
+    console.log ("total items in array:" + totalItems);
+    
+    //dimensional arrays
+    var list3 = [[1,2,3],[45,67,89], [100,234,323]];
+    console.log (list3);
+    console.log ("list3[1][2] :"+list3[1][2]);
+    
+    list3[0][1]=20;
+    console.log(list3);
+    
+    var prices = [10, 15, 25, 8, 4, 55, 99, 11, 15, 25, 5, 4, 65, 5, 10, 15, 7, 8, 4, 9, 100];
+
+    //using a while loop, traverse the array and multiply each price by 2
+    var len = prices.length;
+    var i=0;
+    while (i<len)
+    {   console.log (prices[i]*2);
+        i++;
+    }
+    
+    //Objects
+    var person= {};
+    person.name ="Maria";
+    person.age=20;
+    person.city="Tampico";
+    person.friends = ['pepe','luis','martha'];
+    person.multiplier = function (x,y)
+    {
+        return x*y;
+    };
+    console.log (person);
+    console.log (person.city);
+    console.log (person ['city']);
+    console.log ('calling function: '+ person.multiplier(5,6));
+    
+    //another way to define objects with JSON notation
+    
+    var user = {
+        name: 'Luis',
+        age: 33,
+        city: 'Madero',
+        friends: ['checo','martin','lalo'],
+        profile: {
+            type:'private',
+            account: 'premiun',
+        }
+    };
+    
+    console.log(user);
+    console.log(user.friends[1]);
+    console.log(user.profile.account);
+   </script>
+</body>
+</html>
